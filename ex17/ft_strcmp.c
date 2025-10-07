@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_div_mod.c                                       :+:      :+:    :+:   */
+/*   ft_strcmp.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jericard <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/10/07 13:14:18 by jericard          #+#    #+#             */
-/*   Updated: 2025/10/07 13:14:20 by jericard         ###   ########.fr       */
+/*   Created: 2025/10/07 13:31:50 by jericard          #+#    #+#             */
+/*   Updated: 2025/10/07 13:31:52 by jericard         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,18 +14,22 @@
 
 // #include <stdio.h>
 
-void ft_div_mod(int a, int b, int *div, int *mod)
+int	ft_strcmp(char *s1, char *s2)
 {
-	*div = a / b;
-	*mod = a % b;
-}
+	int	i;
 
+	i = 0;
+	while (s1[i] && s2[i] && s1[i] == s2[i])
+		i++;
+	return (s1[i] - s2[i]);
+}
 // int	main(void)
 // {
-// 	int	p1;
-// 	int	p2;
+// 	char	cadena[] = "Hola comz estas  s";
+// 	char	cadena2[] = "Hola como estas  s";
+// 	int		len;
 
-// 	ft_div_mod(10, 2, &p1, &p2);
-// 	printf("%d - %d", p1, p2);
+// 	len = ft_strcmp(cadena, cadena2);
+// 	printf("%d", len);
 // 	return (0);
 // }

@@ -1,31 +1,54 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_div_mod.c                                       :+:      :+:    :+:   */
+/*   ft_strdup.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jericard <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/10/07 13:14:18 by jericard          #+#    #+#             */
-/*   Updated: 2025/10/07 13:14:20 by jericard         ###   ########.fr       */
+/*   Created: 2025/10/07 16:12:22 by jericard          #+#    #+#             */
+/*   Updated: 2025/10/07 16:12:23 by jericard         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
+#include <stdlib.h>
 
 // #include <stdio.h>
 
-void ft_div_mod(int a, int b, int *div, int *mod)
+int	len(char *src)
 {
-	*div = a / b;
-	*mod = a % b;
+	int	i;
+
+	i = 0;
+	while (src[i])
+		i++;
+	i++;
+	return (i);
+}
+
+char *ft_strdup(char *src)
+{
+	char	*new;
+	int		i;
+	
+	new = malloc((len(src)) * sizeof(char));
+	if (!new)
+		return (NULL);
+	i = -1;
+	while (src[++i])
+		new[i] = src[i];
+	new[++i] = '\0';
+	return (new);
 }
 
 // int	main(void)
 // {
-// 	int	p1;
-// 	int	p2;
+// 	char	string[] = "Hola chao";
+// 	char	*p;
+// 	int		i;
 
-// 	ft_div_mod(10, 2, &p1, &p2);
-// 	printf("%d - %d", p1, p2);
+// 	i = -1;
+// 	p = ft_strdup(string);
+// 	while (p[++i])
+// 		printf("%c", p[i]);
 // 	return (0);
 // }

@@ -1,31 +1,40 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_div_mod.c                                       :+:      :+:    :+:   */
+/*   ft_print_params.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jericard <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/10/07 13:14:18 by jericard          #+#    #+#             */
-/*   Updated: 2025/10/07 13:14:20 by jericard         ###   ########.fr       */
+/*   Created: 2025/10/07 13:36:43 by jericard          #+#    #+#             */
+/*   Updated: 2025/10/07 13:36:44 by jericard         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <unistd.h>
 
-// #include <stdio.h>
+void	ft_putchar(char a);
 
-void ft_div_mod(int a, int b, int *div, int *mod)
-{
-	*div = a / b;
-	*mod = a % b;
-}
-
-// int	main(void)
+// void	ft_putchar(char a)
 // {
-// 	int	p1;
-// 	int	p2;
-
-// 	ft_div_mod(10, 2, &p1, &p2);
-// 	printf("%d - %d", p1, p2);
-// 	return (0);
+// 	write(1, &a, 1);
 // }
+
+int main(int argc, char **argv)
+{
+    int i;
+    int j;
+
+    i = 1;
+    while (i < argc)
+    {
+        j = 0;
+        while (argv[i][j])
+        {
+            ft_putchar(argv[i][j]);
+			j++;
+        }
+		ft_putchar('\n');
+		i++;
+    }
+    return (0);
+}

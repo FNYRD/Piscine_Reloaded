@@ -1,31 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_div_mod.c                                       :+:      :+:    :+:   */
+/*   ft_abs.h                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jericard <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/10/07 13:14:18 by jericard          #+#    #+#             */
-/*   Updated: 2025/10/07 13:14:20 by jericard         ###   ########.fr       */
+/*   Created: 2025/10/07 16:47:26 by jericard          #+#    #+#             */
+/*   Updated: 2025/10/07 16:53:58 by jericard         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
+#ifndef FT_ABS_H
+# define FT_ABS_H
 
-// #include <stdio.h>
+# define ABS(x) ((x) < 0 ? -(x) : (x))
 
-void ft_div_mod(int a, int b, int *div, int *mod)
-{
-	*div = a / b;
-	*mod = a % b;
-}
-
-// int	main(void)
-// {
-// 	int	p1;
-// 	int	p2;
-
-// 	ft_div_mod(10, 2, &p1, &p2);
-// 	printf("%d - %d", p1, p2);
-// 	return (0);
-// }
+#endif
