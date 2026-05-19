@@ -1,32 +1,22 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_ft.c                                            :+:      :+:    :+:   */
+/*   ft_point.h                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jericard <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/10/07 13:07:50 by jericard          #+#    #+#             */
-/*   Updated: 2025/10/07 13:07:51 by jericard         ###   ########.fr       */
+/*   Created: 2025/10/08 13:00:19 by jericard          #+#    #+#             */
+/*   Updated: 2025/10/08 13:09:27 by jericard         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
+#ifndef FT_POINT_H
+# define FT_POINT_H
 
-/*#include <stdio.h>*/
-
-void	ft_ft(int *nbr)
+typedef struct s_point
 {
-	*nbr = 42;
-}
+	int	x;
+	int	y;
+}	t_point;
 
-/*
-int	main(void)
-{
-	int	val;
-
-	val = 1000000;
-	ft_ft(&val);
-	printf("%d", val);
-	return (0);
-}
-*/
+#endif

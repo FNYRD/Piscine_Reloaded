@@ -15,7 +15,7 @@
 
 // #include <stdio.h>
 
-int *ft_range(int min, int max)
+int	*ft_range(int min, int max)
 {
 	int	*pointer;
 	int	i;

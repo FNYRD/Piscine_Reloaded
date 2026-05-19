@@ -31,33 +31,33 @@ int	ft_strcmp(char *s1, char *s2)
 
 void	ft_print_params(int argc, char **argv)
 {
-    int i;
-    int j;
+	int	i;
+	int	j;
 
-    i = 1;
-    while (i < argc)
-    {
-        j = 0;
-        while (argv[i][j])
-        {
-            ft_putchar(argv[i][j]);
+	i = 1;
+	while (i < argc)
+	{
+		j = 0;
+		while (argv[i][j])
+		{
+			ft_putchar(argv[i][j]);
 			j++;
-        }
+		}
 		ft_putchar('\n');
 		i++;
-    }
+	}
 }
 
-int main(int argc, char **argv)
+int	main(int argc, char **argv)
 {
-    int 		i;
-    int 		j;
-	char     	*fake_pointer;
-	
+	int		i;
+	int		j;
+	char	*fake_pointer;
+
 	if (argc < 2)
 		return (0);
 	j = argc - 2;
-	while(j--)
+	while (j--)
 	{
 		i = 0;
 		while (++i < argc - 1)
@@ -71,5 +71,5 @@ int main(int argc, char **argv)
 		}
 	}
 	ft_print_params(argc, argv);
-    return (0);
+	return (0);
 }

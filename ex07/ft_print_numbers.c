@@ -14,7 +14,7 @@
 
 void	ft_putchar(char a);
 
-void ft_print_numbers(void)
+void	ft_print_numbers(void)
 {
 	char	number;
 

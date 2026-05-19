@@ -15,12 +15,12 @@
 // #include <stdio.h>
 // #include <time.h>
 
-int ft_sqrt(int nb)
+int	ft_sqrt(int nb)
 {
 	int	square;
 
 	square = 0;
-    if (nb > 1)
+	if (nb > 1)
 	{
 		while ((square * square) < nb)
 			square++;

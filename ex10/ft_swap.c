@@ -14,13 +14,13 @@
 
 // #include <stdio.h>
 
-void ft_swap(int *a, int *b)
+void	ft_swap(int *a, int *b)
 {
-    int     fake_pointer;
+	int	fake_pointer;
 
-    fake_pointer = *a;
-    *a = *b;
-    *b = fake_pointer;
+	fake_pointer = *a;
+	*a = *b;
+	*b = fake_pointer;
 }
 
 // int	main(void)

@@ -1,54 +1,56 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strdup.c                                        :+:      :+:    :+:   */
+/*   ft_count_if.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jericard <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/10/07 16:12:22 by jericard          #+#    #+#             */
-/*   Updated: 2025/10/07 16:12:23 by jericard         ###   ########.fr       */
+/*   Created: 2025/10/08 14:24:57 by jericard          #+#    #+#             */
+/*   Updated: 2025/10/08 14:25:01 by jericard         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
-
+#include <unistd.h>
 // #include <stdio.h>
 
-int	len(char *src)
+// int is_in(char *p)
+// {
+// 	int		i;
+
+// 	i = 0;
+// 	while (p[i])
+// 	{
+// 		if (p[i] == 'a')
+// 		{
+// 			return (1);
+// 		}
+// 		i++;
+// 	}
+// 	return (0);
+// }
+
+int	ft_count_if(char **tab, int (*f)(char*))
 {
 	int	i;
+	int	cond_t;
 
 	i = 0;
-	while (src[i])
+	cond_t = 0;
+	while (tab[i] != 0)
+	{
+		if ((f(tab[i])) == 1)
+			cond_t++;
 		i++;
-	i++;
-	return (i);
-}
-
-char	*ft_strdup(char *src)
-{
-	char	*new;
-	int		i;
-
-	new = malloc((len(src)) * sizeof(char));
-	if (!new)
-		return (NULL);
-	i = -1;
-	while (src[++i])
-		new[i] = src[i];
-	new[++i] = '\0';
-	return (new);
+	}
+	return (cond_t);
 }
 
 // int	main(void)
 // {
-// 	char	string[] = "Hola chao";
-// 	char	*p;
-// 	int		i;
+// 	char	*tab[] = {"cyz","bc","kfaaaaaal","dabbb",0};
+// 	int		n;
 
-// 	i = -1;
-// 	p = ft_strdup(string);
-// 	while (p[++i])
-// 		printf("%c", p[i]);
+// 	n = ft_count_if(tab, &is_in);
+// 	printf("%d", n);
 // 	return (0);
 // }
